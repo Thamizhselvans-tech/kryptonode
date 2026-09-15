@@ -26,9 +26,9 @@ import { initStorage, getProjects, getTeam } from './services/storageService';
 export default function App() {
   const [activePage, setActivePage] = useState('home');
 
-  // Theme mode state ('dark' | 'navy-light' | 'light')
+  // Theme mode state ('light' | 'dark' | 'navy-light')
   const [themeMode, setThemeMode] = useState(() => {
-    return localStorage.getItem('kryptonode_theme_mode') || 'dark';
+    return localStorage.getItem('kryptonode_theme_mode') || 'light';
   });
 
   // Modals state

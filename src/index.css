@@ -3,20 +3,16 @@
 @tailwind utilities;
 
 :root {
-  --color-bg-main: #06090f;
-  --color-bg-card: rgba(13, 20, 28, 0.7);
-  --color-border-glow: rgba(16, 185, 129, 0.25);
-  --color-emerald-primary: #10b981;
-  --color-mint-accent: #34d399;
+  --color-bg-main: #ffffff;
+  --color-bg-card: rgba(255, 255, 255, 0.9);
+  --color-border-glow: rgba(37, 99, 235, 0.25);
+  --color-blue-primary: #2563eb;
+  --color-blue-accent: #3b82f6;
+  --color-cyan-mint: #06b6d4;
 }
 
-/* Light & Hybrid Theme Variables */
-.light-mode {
-  --color-bg-main: #f8fafc;
-  color: #0f172a;
-}
-
-.theme-navy-grid-light {
+/* Light & White-Blue Theme Variables */
+.light-mode, .theme-navy-grid-light {
   --color-bg-main: #ffffff;
   color: #0f172a;
 }
@@ -24,123 +20,55 @@
 body {
   margin: 0;
   font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-  background-color: var(--color-bg-main);
-  color: #f8fafc;
-  overflow-x: hidden;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.light-mode body,
-.theme-navy-grid-light body {
   background-color: #ffffff;
   color: #0f172a;
+  overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 h1, h2, h3, h4, .font-heading {
   font-family: 'Space Grotesk', 'Plus Jakarta Sans', sans-serif;
 }
 
-/* Blueprint Grid Background Pattern matching screenshot */
+/* White Blueprint Grid Background Pattern */
 .bg-grid-pattern {
-  background-size: 32px 32px;
+  background-color: #ffffff;
+  background-size: 36px 36px;
   background-image: 
-    linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    linear-gradient(to right, rgba(37, 99, 235, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(37, 99, 235, 0.05) 1px, transparent 1px);
 }
 
-/* Deep Midnight Navy Blueprint Grid Header matching screenshot */
+/* Blue Soft Grid Section */
 .bg-navy-grid {
-  background-color: #0b1021;
-  background-size: 32px 32px;
+  background-color: #f8fafc;
+  background-size: 36px 36px;
   background-image: 
-    linear-gradient(to right, rgba(255, 255, 255, 0.07) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+    linear-gradient(to right, rgba(37, 99, 235, 0.07) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(37, 99, 235, 0.07) 1px, transparent 1px);
 }
 
-.light-mode .bg-grid-pattern {
-  background-image: 
-    linear-gradient(to right, rgba(15, 23, 42, 0.06) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(15, 23, 42, 0.06) 1px, transparent 1px);
-}
-
-.theme-navy-grid-light h1,
-.theme-navy-grid-light h2,
-.theme-navy-grid-light h3,
-.theme-navy-grid-light h4 {
-  color: #0f172a;
-}
-
-.theme-navy-grid-light p {
-  color: #334155;
-}
-
-/* Ensure navy-grid sections retain crisp dark background & white text */
-.bg-navy-grid h1,
-.bg-navy-grid h2,
-.bg-navy-grid h3,
-.bg-navy-grid h4,
-.theme-navy-grid-light .bg-navy-grid h1,
-.theme-navy-grid-light .bg-navy-grid h2,
-.theme-navy-grid-light .bg-navy-grid h3,
-.theme-navy-grid-light .bg-navy-grid h4 {
-  color: #ffffff !important;
-}
-
-.bg-navy-grid p,
-.theme-navy-grid-light .bg-navy-grid p {
-  color: #cbd5e1 !important;
-}
-
-/* Custom Glow & Glassmorphism Utilities */
+/* Custom Blue Glassmorphism Utilities */
 .glass-panel {
-  background: rgba(11, 18, 25, 0.65);
+  background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.07);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-}
-
-.light-mode .glass-panel,
-.theme-navy-grid-light .glass-panel {
-  background: #ffffff;
-  border: 1px solid rgba(15, 23, 42, 0.09);
-  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+  border: 1px solid rgba(37, 99, 235, 0.12);
+  box-shadow: 0 10px 30px rgba(37, 99, 235, 0.08);
   color: #0f172a;
 }
 
-.light-mode .glass-panel h3,
-.theme-navy-grid-light .glass-panel h3 {
-  color: #0f172a;
-}
-
-.light-mode .glass-panel p,
-.theme-navy-grid-light .glass-panel p {
-  color: #475569;
-}
-
-.glass-panel-emerald {
-  background: linear-gradient(135deg, rgba(3, 27, 21, 0.75) 0%, rgba(11, 24, 20, 0.85) 100%);
+.glass-panel-emerald, .glass-panel-blue {
+  background: linear-gradient(135deg, #eff6ff 0%, #f0f9ff 100%);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(16, 185, 129, 0.25);
-  box-shadow: 0 10px 30px -10px rgba(5, 150, 105, 0.2);
+  border: 1px solid rgba(37, 99, 235, 0.25);
+  box-shadow: 0 10px 30px -10px rgba(37, 99, 235, 0.15);
+  color: #1e3a8a;
 }
 
-.light-mode .glass-panel-emerald {
-  background: linear-gradient(135deg, #ecfdf5 0%, #f0fdf4 100%);
-  border: 1px solid rgba(16, 185, 129, 0.3);
-  box-shadow: 0 10px 30px -10px rgba(16, 185, 129, 0.15);
-  color: #064e3b;
-}
-
-.text-gradient-emerald {
-  background: linear-gradient(135deg, #ffffff 0%, #a7f3d0 50%, #10b981 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.light-mode .text-gradient-emerald {
-  background: linear-gradient(135deg, #064e3b 0%, #059669 50%, #10b981 100%);
+.text-gradient-emerald, .text-gradient-blue {
+  background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 50%, #0284c7 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -150,18 +78,15 @@ h1, h2, h3, h4, .font-heading {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #06090f;
-}
-.light-mode ::-webkit-scrollbar-track {
-  background: #f1f5f9;
+  background: #f8fafc;
 }
 ::-webkit-scrollbar-thumb {
-  background: #0f2922;
+  background: #cbd5e1;
   border-radius: 4px;
-  border: 1px solid rgba(16, 185, 129, 0.2);
+  border: 1px solid rgba(37, 99, 235, 0.2);
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #10b981;
+  background: #2563eb;
 }
 
 /* Animations */
